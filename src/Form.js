@@ -23,7 +23,7 @@ const schema = yup.object().shape({
     name: yup.string().required('name is required').min(6, 'name needs to be at least 6 characters'),
     email: yup.string().required('email is required'),
     password: yup.string().required('password is required').min(8, 'password needs to be at least 8 characters'),
-    agree: yup.boolean().oneOf([true], 'you must agree the the terms of service'),
+    agree: yup.boolean().oneOf([true], 'you must agree to the terms of service'),
 })
 
 
