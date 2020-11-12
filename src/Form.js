@@ -80,9 +80,9 @@ export default function Form(props) {
     return(
         <div className='form-container'>
             <div style={{ color: 'crimson' }}>
-                <div>{errors.name}</div> <div>{errors.email}</div> <div>{errors.password}</div> <div>{errors.agree}</div>
+                <div id='error-name'>{errors.name}</div> <div id='error-email'>{errors.email}</div> <div id='error-pass'>{errors.password}</div> <div id='error-checkbox'>{errors.agree}</div>
             </div>
-            <form onSubmit={submit}>
+            <form id='form' onSubmit={submit}>
             <div className='form-items'>
                 <label>Name
                     <input onChange={change} value={formData.name} name='name' type='text'/>
@@ -100,7 +100,7 @@ export default function Form(props) {
                     <input onChange={change} checked={formData.agree} name='agree' type='checkbox'/>
                 </label>
 
-                <button disabled={disabled}>Submit</button>
+                <button id='submitBtn' disabled={disabled}>Submit</button>
             </div>
             {users.map((user,idx) => {
                 return(
